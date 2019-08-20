@@ -51,12 +51,37 @@ function ex6(){
     let vet1=[];let vet2=[];let vet3=[];
     let i;
 
-    for(i=0; i<vet3.length; i++){
+    for(i=0; i<5; i++){
         vet1.push(Number(prompt("Digite o numero de vendas: ")));
         vet2.push(Number(prompt("Digite sua comissão:")));
         vet3.push(prompt("Digite seu nome:"));
     }
 
+    var rec=[]
+    for(var i=0;i<5;i++){
+        rec.push(vet1[i]*vet2[i]/100)
+    }
+
+    var maior = rec [0]
+    var menor = rec [0]
+    var nomeMa
+    var nomeMe
+
+    for(vari=0;i<5;i++){
+        if(rec[i]>maior){
+            maior = rec[i]
+            nomeMa = vet3[i]
+        }
+        if(rec[i]<menor){
+            menor = rec[i]
+            nomeMe = vet3[i]
+        }
+    }
+
+    alert(vet3+"\n"+rec)
+    alert(vet3+"\n"+vet1)
+    alert(nomeMa+maior)
+    alert(nomeMe+menor)
 
 
 }
