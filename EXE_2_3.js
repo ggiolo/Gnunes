@@ -97,38 +97,27 @@ function funcao3(){
         objeto.filhos = Number(prompt("Informe a quantidade de filhos:"));
         vet.push(objeto);
     }
-    var salario = vet[0].renda
-    var menorIda = vet[0].idade
-    var maiorIda = vet[0].idade
-    var mulheres = 0
+
     for(var i=0;i<vet.length;i++){
-        salario = salario+vet[i].renda
+        var salario = 0;
+        var mulheres = 0;
+        salario = salario+vet[i].renda;
         media = salario/vet.length
         if((vet[i].sexo=="F")&&(vet[i].filhos>2)){
             mulheres = mulheres+1
         }
         if(menorIda<vet[i].idade){
+            var menorIda = vet[0].idade
             menorIda = vet[i].idade
         }
         if (maiorIda>vet[i].idade){
+            var maiorIda = vet[0].idade
             maiorIda = vet[i].idade
         }
     }
-    alert("Media do salario"+media)
-    alert("Qtd mulheres"+mulheres)
-    alert("Maior idade"+maiorIda/vet.length+"Menor idade"+menorIda/vet.length)
-}
-
-function funcao1(){
-    var vet = []
-
-    for(var i=0;i<vet.length;i++){
-        var objeto = {}
-
-        objeto.codigo = Number(prompt("Digite seu codigo: "));
-        objeto.vendas = Number(prompt("Numero de vendas: "));
-        objeto.mes = Number(prompt("Mes: "));
-    }
+    alert("Media do salario"+media);
+    alert("Qtd mulheres"+mulheres);
+    alert("Maior idade"+maiorIda+"Menor idade"+menorIda);
 }
 
 function funcao5(){
