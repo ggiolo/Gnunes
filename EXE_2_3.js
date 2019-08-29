@@ -51,27 +51,38 @@ function funcao2(){
     var maiorIda = vet[0].idade;
     var homem = 0;
     var pessoas = 0;
-    for(var i=0;i<2;i++){
+    for(var i=0;i<=4;i++){
 
-        if(vet[i].idade > maiorIda){
-            maiorIda = vet[i].idade; 
+        if((vet[i].altura>1.60 )&&(vet[i].cor=="C")){
+            soma = soma + vet[i].idade
         }
-        if(vet[i].sexo =="M"){
-            homem = homem+vet[i].sexo;
-        }
-        if((vet[i].altura>1,60 )&&(vet[i].cor=="C")){
+        media = soma/vet[i].length;
 
+        for (var i = 0;i<=4;i++){
+            var maiorIda = vet[0].idade;
+
+            if(vet[i].idade > maiorIda){
+                maiorIda = vet[i].idade; 
+            }
+            if(vet[i].sexo =="M"){
+                homem = homem+1
+            }
+    
+            if (((vet[i].idade >=20 && vet[i].idade <=45)&&(vet[i].sexo == "F")) || ((vet[i].cor=="V")&&(vet[i].altura<1.70))){
+                pessoas = pessoas+1
+            }
         }
 
-        if (((vet[i].cor=="V")&&(vet[i].altura<1,70))||((vet[i].sexo=="F"))&&((vet[i].idade>20))&&((vet[i].idade<45))){
-
-        }
     }
     alert("Maior idade:"+maiorIda);
-    alert("Percentual de homens:"+homem/vet.length+"%");
-    alert("Media:")
-    alert()
+    alert("Percentual de homens:"+homem/vet.length*100+"%");
+    alert("Media:"+media);
+    alert("Quantidade:"+pessoas);
 }
+
+
+
+
 
 function funcao3(){
     var vet = []
